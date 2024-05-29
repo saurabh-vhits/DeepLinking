@@ -1,5 +1,4 @@
-import Login from '../../screens/auth/login/Login';
-import {Home} from '../../screens/home';
+import { Home, Login } from '@screens/index';
 import screenName from '../screenName';
 
 export const rootStackScreen = [

@@ -1,21 +1,24 @@
-import {View, Text, Button} from 'react-native';
-import React from 'react';
-import {CustomStatusBar, Header} from '@components';
-import color from '@theme/color';
-import {useAuthNavigation} from '@hooks/useAppNavigation';
+import { CustomStatusBar, Header } from '@components';
+import imageIndex from '@imageIndex';
+import React, { FC } from 'react';
+import { Image, View } from 'react-native';
+import { styles } from './login.style';
+import useLogin from './useLogin';
 
-const Login = () => {
-  const navigation = useAuthNavigation();
+const Login: FC = () => {
+  const {onPressBackIcon} = useLogin();
   return (
-    <View style={{flex: 1, backgroundColor: color.white}}>
+    <View style={styles.container}>
       <CustomStatusBar />
-      <View
-        style={{
-          flex: 1,
-          paddingHorizontal: 20,
-        }}>
-        <Header label="Login" showBackIcon onPressBackIcon={()=> navigation.navigate('Home')}/>
-        <Button title="Go Home" onPress={() => navigation.navigate('Home')} />
+      <View style={styles.mainContainer}>
+        <Header label="Login" showBackIcon onPressBackIcon={onPressBackIcon} />
+        <View style={styles.contentContainer}>
+          <Image
+            source={imageIndex.demo}
+            style={styles.image}
+            resizeMode="cover"
+          />
+        </View>
       </View>
     </View>
   );

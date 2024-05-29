@@ -1,10 +1,10 @@
 import SvgIndex from '@svgIndex';
-import React, {FC, memo} from 'react';
-import {View} from 'react-native';
+import React, { FC, memo } from 'react';
+import { View } from 'react-native';
 import RNText from '../rnText/RNText';
 import RnTouchableOpacity from '../rnTouchableOpacity/RNTouchableOpacity';
-import {styles} from './header.style';
-import {HeaderProps} from './headerProps';
+import { styles } from './header.style';
+import { HeaderProps } from './headerProps';
 
 const Header: FC<HeaderProps> = ({
   containerStyle,
