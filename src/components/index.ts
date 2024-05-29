@@ -1,3 +1,5 @@
 import CustomStatusBar from './common/CustomStatusBar/CustomStatusBar';
 import Header from './common/header/Header';
-export {CustomStatusBar, Header};
+import RNText from './common/rnText/RNText';
+import RnTouchableOpacity from './common/rnTouchableOpacity/RNTouchableOpacity';
+export {CustomStatusBar, Header, RNText,RnTouchableOpacity};

@@ -14,7 +14,7 @@ const Login = () => {
           flex: 1,
           paddingHorizontal: 20,
         }}>
-        <Header label="Login" showBackIcon />
+        <Header label="Login" showBackIcon onPressBackIcon={()=> navigation.navigate('Home')}/>
         <Button title="Go Home" onPress={() => navigation.navigate('Home')} />
       </View>
     </View>

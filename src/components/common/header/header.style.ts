@@ -1,9 +1,21 @@
 import color from '@theme/color';
 import {StyleSheet} from 'react-native';
-
+import {scale} from 'react-native-size-scaling';
 export const styles = StyleSheet.create({
   container: {
-    height: 50,
-    backgroundColor: color.while,
+    height: scale(45),
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  backButton: {
+    height:scale(40),
+    width: scale(40),
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
+  },
+  labelText: {
+    fontSize: scale(22),
+    color: color.black,
   },
 });
