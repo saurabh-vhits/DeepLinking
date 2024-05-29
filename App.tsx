@@ -1,12 +1,8 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from 'react';
+import Route from './src/navigation';
 
 const App = () => {
-  return (
-    <View>
-      <Text>Deep Linking</Text>
-    </View>
-  )
-}
+  return <Route />;
+};
 
-export default App
+export default App;
