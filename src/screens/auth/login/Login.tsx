@@ -1,24 +1,28 @@
-import { CustomStatusBar, Header } from '@components';
+import {CustomStatusBar, Header, RNText} from '@components';
 import imageIndex from '@imageIndex';
-import React, { FC } from 'react';
-import { Image, View } from 'react-native';
-import { styles } from './login.style';
+import React, {FC} from 'react';
+import {Image, ScrollView, View} from 'react-native';
+import {styles} from './login.style';
 import useLogin from './useLogin';
 
 const Login: FC = () => {
-  const {onPressBackIcon} = useLogin();
+  const {onPressBackIcon, demoText} = useLogin();
   return (
     <View style={styles.container}>
       <CustomStatusBar />
       <View style={styles.mainContainer}>
         <Header label="Login" showBackIcon onPressBackIcon={onPressBackIcon} />
-        <View style={styles.contentContainer}>
+        <ScrollView
+          contentInsetAdjustmentBehavior="always"
+          contentContainerStyle={styles.contentContainer}
+          showsVerticalScrollIndicator={false}>
           <Image
             source={imageIndex.demo}
             style={styles.image}
             resizeMode="cover"
           />
-        </View>
+          <RNText style={styles.paragraph}>{demoText}</RNText>
+        </ScrollView>
       </View>
     </View>
   );
