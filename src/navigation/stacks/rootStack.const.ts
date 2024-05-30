@@ -15,7 +15,7 @@ export const rootStackScreen: rootStackScreenProps[] = [
     name: screenName.location,
     component: Location,
     options: {
-      presentation: 'transparentModal',
+      presentation: 'modal',
     },
   },
 ];

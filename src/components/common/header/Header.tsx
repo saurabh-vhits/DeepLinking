@@ -2,9 +2,9 @@ import SvgIndex from '@svgIndex';
 import React, { FC, memo } from 'react';
 import { View } from 'react-native';
 import RNText from '../rnText/RNText';
-import RnTouchableOpacity from '../rnTouchableOpacity/RNTouchableOpacity';
 import { styles } from './header.style';
 import { HeaderProps } from './headerProps';
+import RNTouchableHighlight from '../rnTouchableHighlight/RNTouchableHighlight';
 
 const Header: FC<HeaderProps> = ({
   containerStyle,
@@ -15,9 +15,9 @@ const Header: FC<HeaderProps> = ({
   return (
     <View style={[styles.container, containerStyle]}>
       {showBackIcon && (
-        <RnTouchableOpacity onPress={onPressBackIcon} style={styles.backButton}>
+        <RNTouchableHighlight onPress={onPressBackIcon} style={styles.backButton}>
           <SvgIndex.backIcon />
-        </RnTouchableOpacity>
+        </RNTouchableHighlight>
       )}
       <RNText style={styles.labelText}>{label}</RNText>
     </View>

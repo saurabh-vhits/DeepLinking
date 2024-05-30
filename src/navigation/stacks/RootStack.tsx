@@ -1,10 +1,9 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import React, { FC } from 'react';
-import { rootStackScreen } from './rootStack.const';
-// import { createStackNavigator } from '@react-navigation/stack';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import React, {FC} from 'react';
+import {rootStackScreen} from './rootStack.const';
+import {RootStackParams} from './rootStackParams';
 
-// const Stack = createStackNavigator();
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParams>();
 const RootStack: FC = () => {
   return (
     <Stack.Navigator
@@ -12,11 +11,12 @@ const RootStack: FC = () => {
       screenOptions={{
         headerShown: false,
         presentation: 'card',
+        orientation:'portrait'
       }}>
       {rootStackScreen?.map(screen => (
         <Stack.Screen
           key={screen.name}
-          name={screen?.name}
+          name={screen?.name as keyof RootStackParams}
           component={screen?.component}
           options={screen?.options}
         />
