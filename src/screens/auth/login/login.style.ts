@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingHorizontal: 10,
+    paddingBottom:20
   },
   image: {
     height: scale(200),

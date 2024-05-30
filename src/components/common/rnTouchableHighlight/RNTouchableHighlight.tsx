@@ -1,9 +1,9 @@
 import color from '@theme/color';
 import React, {FC, memo} from 'react';
 import {TouchableHighlight} from 'react-native';
-import {RNTouchableOpacityProps} from './rnTouchableOpacityProps';
+import {RNTouchableHighlightProps} from './rnTouchableHighlightProps';
 
-const RNTouchableOpacity: FC<RNTouchableOpacityProps> = ({
+const RNTouchableHighlight: FC<RNTouchableHighlightProps> = ({
   children,
   onPress,
   style,
@@ -19,4 +19,4 @@ const RNTouchableOpacity: FC<RNTouchableOpacityProps> = ({
   );
 };
 
-export default memo(RNTouchableOpacity);
+export default memo(RNTouchableHighlight);
