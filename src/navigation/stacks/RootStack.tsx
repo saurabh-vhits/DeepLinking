@@ -1,7 +1,9 @@
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import React, {FC} from 'react';
-import {rootStackScreen} from './rootStack.const';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React, { FC } from 'react';
+import { rootStackScreen } from './rootStack.const';
+// import { createStackNavigator } from '@react-navigation/stack';
 
+// const Stack = createStackNavigator();
 const Stack = createNativeStackNavigator();
 const RootStack: FC = () => {
   return (
@@ -16,7 +18,8 @@ const RootStack: FC = () => {
           key={screen.name}
           name={screen?.name}
           component={screen?.component}
-          options={screen?.options}/>
+          options={screen?.options}
+        />
       ))}
       <></>
     </Stack.Navigator>
