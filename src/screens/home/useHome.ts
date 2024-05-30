@@ -6,7 +6,7 @@ const useHome = () => {
 
   /** handle back navigation */
   const onPressBackIcon = useCallback(() => {
-    navigation.navigate('Login');
+    navigation.navigate('Location');
   }, []);
 
   return {onPressBackIcon};

@@ -1,13 +1,21 @@
-import { Home, Login } from '@screens/index';
+import {Home, Location, Login} from '@screens/index';
 import screenName from '../screenName';
+import {rootStackScreenProps} from './rootStackParams';
 
-export const rootStackScreen = [
+export const rootStackScreen: rootStackScreenProps[] = [
   {
     name: screenName.home,
-    Component: Home,
+    component: Home,
   },
   {
     name: screenName.login,
-    Component: Login,
+    component: Login,
+  },
+  {
+    name: screenName.location,
+    component: Location,
+    options: {
+      presentation: 'modal',
+    },
   },
 ];
