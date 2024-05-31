@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     paddingBottom:20
   },
   image: {
+    marginTop:20,
     height: scale(200),
     width: '100%',
   },
