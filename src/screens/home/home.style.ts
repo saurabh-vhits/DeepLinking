@@ -18,4 +18,10 @@ export const styles = StyleSheet.create({
     height: scale(200),
     width: '100%',
   },
+  paragraph: {
+    marginTop: 10,
+    fontSize: scale(16),
+    color: color.black,
+    textAlign: 'justify',
+  },
 });
